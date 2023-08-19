@@ -15,7 +15,7 @@ services:
     build:
       context: ./app
     ports:
-      - "5000:5000"
+      - "6000:6000"
     environment:
       DATABASE_URI: "postgresql://ruegen:ruegen@postgres/secure_file_system"
     networks:
