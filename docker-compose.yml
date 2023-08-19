@@ -14,8 +14,9 @@ services:
   flask:
     build:
       context: ./app
+    image: salonighorpade/securefrontend
     ports:
-      - "6000:6000"
+      - "5000:5000"
     environment:
       DATABASE_URI: "postgresql://ruegen:ruegen@postgres/secure_file_system"
     networks:
