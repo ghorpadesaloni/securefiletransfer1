@@ -11,10 +11,10 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 # Expose the port the app runs on
-EXPOSE 6000
+EXPOSE 5000
 
 # Define environment variable
 ENV FLASK_APP=app.py
 
 # Run the application
-CMD ["flask", "run", "--host=0.0.0.0", "--port=6000"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
