@@ -24,7 +24,7 @@ pipeline {
         }
         stage ('docker image push') {
             steps {
-                sh 'docker-compose push'
+                sh 'docker image push salonighorpade/securefrontend'
             }
         }
         stage ('get the confirmation from user') {
