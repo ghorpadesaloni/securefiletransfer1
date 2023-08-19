@@ -1,5 +1,3 @@
-
-
 pipeline {
     agent any
     stages {
@@ -10,13 +8,9 @@ pipeline {
         }
         stage ('docker image build') {
             steps {
-                script {
-                    docker.image('docker/compose:1.29.2').inside('-v /var/run/docker.sock:/var/run/docker.sock') {
                         sh 'docker-compose build'
                     }
-                }
-            }
-        }
+        }    
         stage ('docker login') {
             steps {
                 sh 'echo dckr_pat_D56b1i2WmP02Q8FkTZa1Jf30bvU | /usr/bin/docker login -u salonighorpade --password-stdin'
@@ -44,4 +38,3 @@ pipeline {
         }
     }
 }
-
